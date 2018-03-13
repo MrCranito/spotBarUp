@@ -72,7 +72,7 @@ class QRCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession.stopRunning()
-        
+        print("ok")
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
@@ -80,11 +80,19 @@ class QRCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             found(code: stringValue)
         }
         
-        dismiss(animated: true)
+        //dismiss(animated: true)
     }
     
     func found(code: String) {
         print(code)
+        let alert = UIAlertController(title : "Vous avez ajouté en ami :", message : code, preferredStyle : UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title : "OK", style : UIAlertActionStyle.default, handler : {
+            (action) in
+            alert.dismiss(animated : true, completion : nil)
+            self.viewDidLoad()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override var prefersStatusBarHidden: Bool {

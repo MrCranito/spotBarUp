@@ -11,10 +11,10 @@
 		3441C46688C9BB7707BC5403 /* Pods_SpotBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F6C0375D40FF8975663E6D /* Pods_SpotBarTests.framework */; };
 		59561D45B5F119DA98E83986 /* Pods_SpotBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E189820CE429121FE88AEC /* Pods_SpotBarUITests.framework */; };
 		BF5B1AF82045AAD700BA2FE0 /* UserSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B1AF72045AAD700BA2FE0 /* UserSignIn.swift */; };
-		BF7CFD102044EC09002DB3B2 /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD0F2044EC09002DB3B2 /* register.swift */; };
+		BF7CFD102044EC09002DB3B2 /* userServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD0F2044EC09002DB3B2 /* userServiceImp.swift */; };
 		BF7CFD122044EF9A002DB3B2 /* usersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD112044EF9A002DB3B2 /* usersService.swift */; };
 		BF7CFD142044F1C6002DB3B2 /* UserInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD132044F1C6002DB3B2 /* UserInject.swift */; };
-		BF7CFD162044F2D7002DB3B2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD152044F2D7002DB3B2 /* UserViewController.swift */; };
+		BF7CFD162044F2D7002DB3B2 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD152044F2D7002DB3B2 /* UserRegister.swift */; };
 		BF7CFD182044F30C002DB3B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFD172044F30C002DB3B2 /* User.swift */; };
 		BF7F121A204D925000D17DFF /* SignIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F1219204D925000D17DFF /* SignIN.swift */; };
 		BF964114202AF1EC00B9D82F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF964113202AF1EC00B9D82F /* AppDelegate.swift */; };
@@ -28,13 +28,14 @@
 		BF964147202AFC2F00B9D82F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF964146202AFC2F00B9D82F /* MapKit.framework */; };
 		BFCDB47C202E570E00295A7C /* BarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDB47B202E570E00295A7C /* BarAnnotation.swift */; };
 		BFCDB47D202F276800295A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF96411B202AF1ED00B9D82F /* Main.storyboard */; };
-		BFD53FE6204EDCBA0024D0C2 /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD53FE5204EDCBA0024D0C2 /* map.swift */; };
+		BFD53FE6204EDCBA0024D0C2 /* mapServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD53FE5204EDCBA0024D0C2 /* mapServiceImp.swift */; };
 		BFD53FE8204EDD140024D0C2 /* mapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD53FE7204EDD140024D0C2 /* mapService.swift */; };
 		BFD53FEA204EE0E90024D0C2 /* getStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD53FE9204EE0E90024D0C2 /* getStuff.swift */; };
 		BFD53FEC2050475B0024D0C2 /* mapResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD53FEB2050475B0024D0C2 /* mapResult.swift */; };
 		BFD5F6062052A50B00604A8C /* checkSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5F6052052A50B00604A8C /* checkSchema.swift */; };
 		BFD5F6082052EDFB00604A8C /* friendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5F6072052EDFB00604A8C /* friendList.swift */; };
 		BFD5F60A2055749300604A8C /* mailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5F6092055749300604A8C /* mailUser.swift */; };
+		BFF8475C2056DDD7008393A9 /* userView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8475B2056DDD7008393A9 /* userView.swift */; };
 		BFFF12CE2056873300D9C323 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF12CD2056873300D9C323 /* QRCode.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,10 +65,10 @@
 		B5F6C0375D40FF8975663E6D /* Pods_SpotBarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotBarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA91538741EFBD2B7222638C /* Pods-SpotBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotBarUITests/Pods-SpotBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF5B1AF72045AAD700BA2FE0 /* UserSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignIn.swift; sourceTree = "<group>"; };
-		BF7CFD0F2044EC09002DB3B2 /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
+		BF7CFD0F2044EC09002DB3B2 /* userServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userServiceImp.swift; sourceTree = "<group>"; };
 		BF7CFD112044EF9A002DB3B2 /* usersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersService.swift; sourceTree = "<group>"; };
 		BF7CFD132044F1C6002DB3B2 /* UserInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInject.swift; sourceTree = "<group>"; };
-		BF7CFD152044F2D7002DB3B2 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		BF7CFD152044F2D7002DB3B2 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		BF7CFD172044F30C002DB3B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF7F1219204D925000D17DFF /* SignIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIN.swift; sourceTree = "<group>"; };
 		BF964110202AF1EC00B9D82F /* SpotBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,13 +88,14 @@
 		BF964139202AF1ED00B9D82F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF964146202AFC2F00B9D82F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BFCDB47B202E570E00295A7C /* BarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnnotation.swift; sourceTree = "<group>"; };
-		BFD53FE5204EDCBA0024D0C2 /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
+		BFD53FE5204EDCBA0024D0C2 /* mapServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapServiceImp.swift; sourceTree = "<group>"; };
 		BFD53FE7204EDD140024D0C2 /* mapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapService.swift; sourceTree = "<group>"; };
 		BFD53FE9204EE0E90024D0C2 /* getStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStuff.swift; sourceTree = "<group>"; };
 		BFD53FEB2050475B0024D0C2 /* mapResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapResult.swift; sourceTree = "<group>"; };
 		BFD5F6052052A50B00604A8C /* checkSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkSchema.swift; sourceTree = "<group>"; };
 		BFD5F6072052EDFB00604A8C /* friendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendList.swift; sourceTree = "<group>"; };
 		BFD5F6092055749300604A8C /* mailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailUser.swift; sourceTree = "<group>"; };
+		BFF8475B2056DDD7008393A9 /* userView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userView.swift; sourceTree = "<group>"; };
 		BFFF12CD2056873300D9C323 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		ECE536E348882AA7E37FD639 /* Pods-SpotBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotBar/Pods-SpotBar.debug.xcconfig"; sourceTree = "<group>"; };
 		F2D31AD18BC034EBF954E75B /* Pods-SpotBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotBarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotBarTests/Pods-SpotBarTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		BF3D56282044969E00464B72 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				BFCDB47B202E570E00295A7C /* BarAnnotation.swift */,
 				BFD53FEB2050475B0024D0C2 /* mapResult.swift */,
 				BFD5F6052052A50B00604A8C /* checkSchema.swift */,
 				BFD53FE9204EE0E90024D0C2 /* getStuff.swift */,
@@ -158,9 +161,7 @@
 		BF3D5629204496AD00464B72 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BF7CFD0F2044EC09002DB3B2 /* register.swift */,
 				BF7CFD112044EF9A002DB3B2 /* usersService.swift */,
-				BFD53FE5204EDCBA0024D0C2 /* map.swift */,
 				BFD53FE7204EDD140024D0C2 /* mapService.swift */,
 			);
 			path = Services;
@@ -191,21 +192,18 @@
 		BF964112202AF1EC00B9D82F /* SpotBar */ = {
 			isa = PBXGroup;
 			children = (
+				BFF8475A2056DD4A008393A9 /* views */,
+				BFF847592056DD2D008393A9 /* Services Imp */,
 				BF3D5629204496AD00464B72 /* Services */,
 				BF3D56282044969E00464B72 /* models */,
 				BF964113202AF1EC00B9D82F /* AppDelegate.swift */,
 				BF964115202AF1EC00B9D82F /* RootViewController.swift */,
-				BF964117202AF1EC00B9D82F /* DataViewController.swift */,
 				BF964119202AF1EC00B9D82F /* ModelController.swift */,
 				BF96411B202AF1ED00B9D82F /* Main.storyboard */,
 				BF96411E202AF1ED00B9D82F /* Assets.xcassets */,
 				BF964120202AF1ED00B9D82F /* LaunchScreen.storyboard */,
 				BF964123202AF1ED00B9D82F /* Info.plist */,
-				BFCDB47B202E570E00295A7C /* BarAnnotation.swift */,
 				BF7CFD132044F1C6002DB3B2 /* UserInject.swift */,
-				BF7CFD152044F2D7002DB3B2 /* UserViewController.swift */,
-				BF5B1AF72045AAD700BA2FE0 /* UserSignIn.swift */,
-				BFFF12CD2056873300D9C323 /* QRCode.swift */,
 			);
 			path = SpotBar;
 			sourceTree = "<group>";
@@ -237,6 +235,27 @@
 				99E189820CE429121FE88AEC /* Pods_SpotBarUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFF847592056DD2D008393A9 /* Services Imp */ = {
+			isa = PBXGroup;
+			children = (
+				BFD53FE5204EDCBA0024D0C2 /* mapServiceImp.swift */,
+				BF7CFD0F2044EC09002DB3B2 /* userServiceImp.swift */,
+			);
+			path = "Services Imp";
+			sourceTree = "<group>";
+		};
+		BFF8475A2056DD4A008393A9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CFD152044F2D7002DB3B2 /* UserRegister.swift */,
+				BF5B1AF72045AAD700BA2FE0 /* UserSignIn.swift */,
+				BFFF12CD2056873300D9C323 /* QRCode.swift */,
+				BF964117202AF1EC00B9D82F /* DataViewController.swift */,
+				BFF8475B2056DDD7008393A9 /* userView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,10 +560,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF8475C2056DDD7008393A9 /* userView.swift in Sources */,
 				BFCDB47C202E570E00295A7C /* BarAnnotation.swift in Sources */,
-				BF7CFD162044F2D7002DB3B2 /* UserViewController.swift in Sources */,
+				BF7CFD162044F2D7002DB3B2 /* UserRegister.swift in Sources */,
 				BF7CFD142044F1C6002DB3B2 /* UserInject.swift in Sources */,
-				BF7CFD102044EC09002DB3B2 /* register.swift in Sources */,
+				BF7CFD102044EC09002DB3B2 /* userServiceImp.swift in Sources */,
 				BF964116202AF1EC00B9D82F /* RootViewController.swift in Sources */,
 				BF96411A202AF1EC00B9D82F /* ModelController.swift in Sources */,
 				BF7CFD122044EF9A002DB3B2 /* usersService.swift in Sources */,
@@ -557,7 +577,7 @@
 				BFD53FEA204EE0E90024D0C2 /* getStuff.swift in Sources */,
 				BFD53FE8204EDD140024D0C2 /* mapService.swift in Sources */,
 				BF5B1AF82045AAD700BA2FE0 /* UserSignIn.swift in Sources */,
-				BFD53FE6204EDCBA0024D0C2 /* map.swift in Sources */,
+				BFD53FE6204EDCBA0024D0C2 /* mapServiceImp.swift in Sources */,
 				BFD5F6082052EDFB00604A8C /* friendList.swift in Sources */,
 				BFD5F6062052A50B00604A8C /* checkSchema.swift in Sources */,
 				BF964114202AF1EC00B9D82F /* AppDelegate.swift in Sources */,

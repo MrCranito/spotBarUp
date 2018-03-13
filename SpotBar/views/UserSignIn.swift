@@ -18,8 +18,12 @@ class UserSignIn : UIViewController {
     @IBOutlet weak var passwordSignin: UITextField!
     
     var userService: UserService?
+    
+    var email : String?
 
     var mailcheckup : Bool!
+    
+    
     
     func validateEmail(enteredEmail:String) -> Bool {
         
@@ -43,9 +47,48 @@ class UserSignIn : UIViewController {
         
     }
     
+    
+    struct userSaved{
+        static var staticHelperMail : String?
+        static var staticHelperPwd : String?
+        static var userMailData : String{
+            get{
+                return staticHelperMail!
+            }
+            set{
+                self.userMailData = staticHelperMail!
+            }
+        }
+        static var userPasswordData : String{
+            get{
+                return staticHelperPwd!
+            }
+            set{
+                self.userPasswordData = staticHelperPwd!
+            }
+        }
+         var array = [String]()
+        
+        mutating func returnData() -> Array<String>{
+           
+            array.append(userSaved.userMailData)
+            array.append(userSaved.userPasswordData)
+            return array
+        }
+        
+        
+        
+    }
+    
+    
+    public var getStructure = userSaved(array:[])
+    
+
     @IBAction func SignUp(_ sender: Any) {
        let checkEmail = validateEmail(enteredEmail: mailSignin.text!)
        if(checkEmail == true){
+            userSaved.staticHelperMail = mailSignin.text!
+            userSaved.staticHelperPwd = passwordSignin.text!
             let user = SignIn(email: mailSignin.text!, password: passwordSignin.text!)
             userService?.signIn(user: user, completion: {(user: SignIn?, error: Error?) in
                 
@@ -63,5 +106,7 @@ class UserSignIn : UIViewController {
         windowsError(title : "Error On LoginIn", message :"Mail isn't conform to the format : test@myaddress.com")
         }
     }
+
+    
     
 }

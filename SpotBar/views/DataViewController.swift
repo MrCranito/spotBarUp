@@ -13,8 +13,8 @@ import Foundation
 class DataViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var addFriend: UITextField!
-    
     @IBOutlet weak var userMail: UITextField!
+    
     @IBAction func addToListFriend(_ sender: Any) {
         
         let emailUser = userMail.text!
@@ -42,8 +42,8 @@ class DataViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 for item in (params?.friendList)!{ /////// BUGGED HERE //// ADD Usermail aumatiquely // field addfriend
                     
                     print(item)
-                    let json = User(name:"", lastname:"", email: item as! String, password:"", friendList:[], coordinateX:0, coordinateY:0 , localisationActived : true)
-                    self.userService?.getUser(params: json, completion: { (params : User?, error :Error?) in
+                    let json = SignIn(email : "test", password : "test")
+                    self.userService?.getUser(params: json, completion: {(params: String?, error: Error?) in
                         if(error != nil){
                             return
                         }
@@ -71,7 +71,7 @@ class DataViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             
             let json = checkSchema(state: state as! String, country : country as! String)
             print(json.country, json.state)
-            self.userService?.checkSchema(params: json, completion: {(checkSchema: checkSchema?, error : Error?) in
+            self.userService?.connectDB(params: json, completion: {(checkSchema: checkSchema?, error : Error?) in
                 if error != nil {
                     NSLog("\(String(describing: error))")
                     return

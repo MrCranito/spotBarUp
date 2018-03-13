@@ -64,5 +64,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Spotbar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>My description about why I need this capability</string>
 </dict>
 </plist>

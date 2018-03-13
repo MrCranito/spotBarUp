@@ -7,65 +7,8 @@ var express = require('express');
 
    
 module.exports.publicRoutes = function () {
-
-    mongoose.connect('mongodb://localhost/spotbardb', function(err) {
-        if (err) { throw err; }
-        else{
-            console.log("database Connected");
-        }
-      });
-
     
     var router = express.Router();
-
-    router.post('/testConnect', (req , resp, next)=>{
-             var country = req.body.country;
-                state = req.body.state;
-                concat = country+"."+state+".Bar";
-
-            //console.log(req);
-            mongoose.connection.db.collection(concat, function(err, collection){
-                if(err){
-                     resp.json({
-                         errorOnConnect : "Error During Connection DB"+ err
-                     });
-                }
-                else{
-                    collection.findOne({}, function(err, result){
-                            if(err){
-                                console.log("No Data Provided")
-                            }
-                            else{
-                                if(result == null){
-                                    var createNewSchema = new mongoose.Schema({ email: 'string', password:'string', barName:'string', coordinateX : 'number', coordinateY:'number', description:'string',linkFb:'string', linkInsta: 'string', linkDigitik:'string', picture: 'string'},
-                                    { collection : concat });
-                                    var json = { email: 'ok', password:'ok', barName:'ok', coordinateX : '1', coordinateY:'2', description:'ok',linkFb:'ok', linkInsta: 'ok', linkDigitik:'ok', picture: 'ok'};
-                                    var modelnewSchema = mongoose.model('spotbar'+concat, createNewSchema);
-                                    modelnewSchema.create(json, function(err, result){
-                                            if(err){
-                                                resp.json({
-                                                    result : "Schema Creation Failed"
-                                                });
-                                            }
-                                            else{
-                                                resp.json({
-                                                    result : "Schema Creation Success"
-                                                });
-                                            }
-                                    });
-                                }
-                                else{
-                                    resp.json({
-                                        result :"DB already exists"
-                                    })
-                                }
-                               
-                            }
-                    });
-                }
-            });
-    });
- 
     var schemaUser = new mongoose.Schema({ username: 'string', name: 'string' , email: 'string', password:'string', friendList:'array', coordinateX:'number', coordinateY:'number',localisationActived:'Boolean'},{ collection : 'spotbarUser' });
     var modelUser = mongoose.model('User', schemaUser);
     const saltRounds = 10;
@@ -192,11 +135,14 @@ module.exports.publicRoutes = function () {
                 }
             }
         });
-    });
+    });                                                                                                                                                                                                                                                                                                                       
     router.get('/getUser', (req, resp, next )=>{
 
+        console.log("ok");
         var email = req.body.email;
-            json = {email : email};
+            json = { email : email };
+
+        console.log(json);
 
         modelUser.findOne(json, function(err, userChecking){
             if(err){ 
